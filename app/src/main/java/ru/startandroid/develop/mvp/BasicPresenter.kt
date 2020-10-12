@@ -1,9 +1,9 @@
-package ru.startandroid.develop.retrofittest
+package ru.startandroid.develop.mvp
 
-import ru.startandroid.develop.retrofittest.main.MainView
+import android.view.View
 import java.lang.ref.WeakReference
 
-abstract class BasicPresenter <V : MainView?> {
+abstract class BasicPresenter <V : BasicView?> {
     private var view: WeakReference<V>? = null
     private fun bindView(view: V) {
         this.view = WeakReference(view)

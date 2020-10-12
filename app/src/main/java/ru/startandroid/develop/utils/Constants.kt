@@ -1,4 +1,4 @@
-package ru.startandroid.develop.retrofittest.utils
+package ru.startandroid.develop.utils
 
 class Constants {
 
