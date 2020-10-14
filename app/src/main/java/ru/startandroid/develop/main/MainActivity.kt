@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import ru.startandroid.develop.R
-import ru.startandroid.develop.start.MainFragment
+import ru.startandroid.develop.start.PostsFragment
 
 class  MainActivity : AppCompatActivity(), MainView {
 
@@ -27,7 +27,8 @@ class  MainActivity : AppCompatActivity(), MainView {
     }
 
     private fun goToMainFragment() {
-        val fragment: Fragment = MainFragment.newInstance()
+        // відкриваємо Main Fragment із bottom navigation
+        val fragment: Fragment = PostsFragment.newInstance()
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()
         ft.replace(R.id.mainContainer, fragment)

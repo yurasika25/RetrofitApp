@@ -6,8 +6,13 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorRed">#C3D65454</color>
     <color name="colorBlue">#039BE5</color>
-    <color name="colorGreen">#C4A7DD6E</color>
+    <color name="colorGreen">#ACD67F</color>
     <color name="colorNice">#F2FFFD</color>
     <color name="colorBlack">#000000</color>
     <color name="colorMy">#FFFFFF</color>
+    <color name="colorP">#EA910A</color>
+    <color name="colorRED">#E53935</color>
+    <color name="colorGREEN">#006504</color>
+
+
 </resources>

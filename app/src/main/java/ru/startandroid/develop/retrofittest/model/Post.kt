@@ -7,7 +7,7 @@ class  Post{
     var body: String? = null
 
 
-    constructor(userId:String, words: String, title: String, body: String){
+    constructor(userId:String, id: String, title: String, body: String){
         this.userId = userId
         this.id = id
         this.title = title

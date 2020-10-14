@@ -5,7 +5,8 @@ import ru.startandroid.develop.retrofittest.model.Post
 import ru.startandroid.develop.retrofittest.model.TestModel
 
 
-interface MainFragmentView : BasicView{
+interface PostsFragmentView : BasicView{
+    fun navigateToAddEdit()
 
     fun setUpUI(data : List<Post>)
 
