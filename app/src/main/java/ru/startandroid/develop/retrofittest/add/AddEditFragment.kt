@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import ru.startandroid.develop.R
 
 class AddEditFragment : Fragment(), AddEditView {
+
     private var presenter: AddEditPresenter? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -18,6 +20,24 @@ class AddEditFragment : Fragment(), AddEditView {
         return view
     }
 
+    override fun onPause() {
+        super.onPause()
+        presenter?.exitFromView()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        presenter?.enterWithView(this)
+    }
+
+    companion object {
+        fun newInstance(): AddEditFragment {
+            val args = Bundle()
+            val fragment = AddEditFragment()
+            fragment.arguments = args
+            return fragment
+        }
+    }
 
     override fun navigateToAddEdit() {}
 }

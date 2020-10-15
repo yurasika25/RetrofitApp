@@ -21,7 +21,6 @@ class PostsFragmentPresenter : BasicPresenter<PostsFragmentView?>() {
         getView()?.navigateToAddEdit()
     }
 
-
     private fun fetchData() {
         repo = Repository()
         repo.getPost()

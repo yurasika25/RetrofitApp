@@ -1,4 +1,8 @@
 package ru.startandroid.develop.maintwo
 
-interface MainFragmentView {
+import ru.startandroid.develop.mvp.BasicView
+
+interface MainFragmentView : BasicView{
+    fun navigateToPosts()
+    fun navigateToPhotos()
 }

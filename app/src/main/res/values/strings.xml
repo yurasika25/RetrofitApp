@@ -6,8 +6,8 @@
     <string name="two">TextTwo</string>
     <string name="title_activity_main2">MainActivity</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="posts_fragment">Posts Fragment</string>
+    <string name="photos_fragment">Photos Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 

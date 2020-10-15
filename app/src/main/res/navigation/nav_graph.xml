@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/PostsFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="ru.startandroid.develop.main.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/PostsFragment"
+        android:name="ru.startandroid.develop.start.PostsFragment"
+        android:label="@string/posts_fragment"
+        tools:layout="@layout/fragment_posts">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_PostsFragment_to_Photos_Fragment"
+            app:destination="@id/PhotosFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="ru.startandroid.develop.main.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/PhotosFragment"
+        android:name="ru.startandroid.develop.photos.PhotosFragment"
+        android:label="@string/photos_fragment"
+        tools:layout="@layout/fragment_photos">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_PhotosFragment_to_PostsFragment"
+            app:destination="@id/PostsFragment" />
     </fragment>
 </navigation>
