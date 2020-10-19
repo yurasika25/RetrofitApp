@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_main.*
 import ru.startandroid.develop.R
-import ru.startandroid.develop.catandbird.screens.three.AddEditFragment
-import ru.startandroid.develop.photos.PhotosFragment
+import ru.startandroid.develop.catandbird.screens.list.FragmentPhoto
 import ru.startandroid.develop.start.PostsFragment
 
 
@@ -63,8 +62,8 @@ class MainFragment : Fragment(), MainFragmentView {
         ft.commit()
     }
 
-    override fun navigateToPhotos() {
-        val fragment: Fragment = AddEditFragment.newInstance()
+    override fun navigateToFragmentPhoto() {
+        val fragment: Fragment = FragmentPhoto.newInstance()
         val fm = childFragmentManager
         val ft = fm.beginTransaction()
         ft.replace(R.id.container, fragment)

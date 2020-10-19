@@ -6,7 +6,7 @@
         android:title="@string/posts" />
 
     <item
-        android:id="@+id/navigation_photos"
+        android:id="@+id/navigation_photo"
         android:icon="@android:drawable/ic_delete"
         android:title="@string/photos" />
 

@@ -11,8 +11,8 @@ class MainFragmentPresenter : BasicPresenter<MainFragmentView?> (){
             R.id.navigation_posts -> {
                 getView()?.navigateToPosts()
             }
-            R.id.navigation_photos -> {
-                getView()?.navigateToPhotos()
+            R.id.navigation_photo -> {
+                getView()?.navigateToFragmentPhoto()
             }
         }
     }

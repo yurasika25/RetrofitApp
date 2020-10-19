@@ -13,6 +13,9 @@
     <color name="colorP">#EA910A</color>
     <color name="colorRED">#E53935</color>
     <color name="colorGREEN">#006504</color>
+    <color name="colorGREENR">#02685E</color>
+    <color name="colorLightGreen">#D1FFC7</color>
+
 
 
 </resources>
