@@ -1,4 +1,7 @@
 package ru.startandroid.develop.photos
 
-interface PhotosFragmentView {
+import ru.startandroid.develop.mvp.BasicView
+
+interface PhotosFragmentView : BasicView {
+    fun navigateToPhotos()
 }

@@ -15,13 +15,17 @@ import ru.startandroid.develop.main.MainActivity
 class MyAdapter(private val listItems: List<TestModel>, private val mContext: Context) :
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v: View =
             LayoutInflater.from(parent.context).inflate(R.layout.item_two_test, parent, false)
         (parent.context as MainActivity).windowManager.defaultDisplay.getMetrics(displayMetrics)
         screenWidth = displayMetrics.widthPixels
+
         return ViewHolder(v)
     }
+
+
 
     var displayMetrics = DisplayMetrics()
     private var screenWidth = 0
