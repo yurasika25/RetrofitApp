@@ -1,6 +1,5 @@
 package ru.startandroid.develop.mvp
 
-import android.view.View
 import java.lang.ref.WeakReference
 
 abstract class BasicPresenter <V : BasicView?> {

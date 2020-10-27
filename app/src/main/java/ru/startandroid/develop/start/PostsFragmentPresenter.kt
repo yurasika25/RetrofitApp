@@ -20,15 +20,16 @@ class PostsFragmentPresenter : BasicPresenter<PostsFragmentView?>() {
     }
 
     fun onFatButtonClicked() {
-        getView()?.navigateToPhotos()
+        getView()?.navigateToEmpty()
     }
 
     fun onPenButtonClicked () {
         getView()?.navigateToAddEdit()
     }
 
-
-
+    fun onDeleteButtonClicked () {
+        getView()?.navigateToEmpty()
+    }
 
     private fun fetchData() {
         repo = Repository()
@@ -38,8 +39,18 @@ class PostsFragmentPresenter : BasicPresenter<PostsFragmentView?>() {
             .subscribe({ result ->
                 result.forEach {
                     listItems.add(it)
-                    getView()?.setUpUI(listItems)
                 }
+                listItems.add(Post("1","Gk","fdfdf","dfdfdf"))
+                listItems.forEach {
+                    when(it.userId)
+                    {
+                        "1" ->it.userId += "User"
+                        "2"->it.userId += "UserNew"
+                        "3"->it.userId += "UserThree"
+                        else ->it.userId += "None"
+                    }
+                }
+                getView()?.setUpUI(listItems)
                 Log.d("Result", "Success")
             }, { error ->
                 error.printStackTrace()

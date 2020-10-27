@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.item_main.view.*
 import ru.startandroid.develop.R
 import ru.startandroid.develop.retrofittest.model.Post
 
-class MyAdapter(private val listItems: List<Post>, private val listener:() -> Unit):
+class MyAdapter(private val listItems: List<Post>, private val listenerThree: () -> Unit, private val listenerTwo:() -> Unit, private val listener:() -> Unit):
         RecyclerView.Adapter<MyAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v: View =
@@ -19,9 +19,13 @@ class MyAdapter(private val listItems: List<Post>, private val listener:() -> Un
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemList = listItems[position]
         holder.itemView.view_pen.setOnClickListener{listener()}
+        holder.itemView.view_delete.setOnClickListener{listenerTwo()}
+        holder.itemView.titleTwo.setOnClickListener{listenerThree()}
 
-        holder.itemView.one_title.text = itemList.title
+        holder.itemView.one_title.text = itemList.userId
         holder.itemView.two_title.text = itemList.id
+        holder.itemView.three_title.text = itemList.title
+        holder.itemView.four_title.text = itemList.body
     }
 
     override fun getItemCount(): Int {

@@ -3,6 +3,7 @@
     <string name="textview">TextView</string>
     <string name="newcar">TextView</string>
     <string name="one">TextOne</string>
+    <string name="MainTitle">Just Title</string>
     <string name="two">TextTwo</string>
     <string name="title_activity_main2">MainActivity</string>
     <!-- Strings used for fragments for navigation -->
@@ -17,5 +18,10 @@
     <string name="posts">Posts</string>
     <string name="photos">Photos</string>
     <string name="font">float</string>
+    <string name="button">Create</string>
+    <string name="Add">Add Item</string>
+    <string name="title">title</string>
+    <string name="body">body</string>
+    <string name="item">Item</string>
 
 </resources>
