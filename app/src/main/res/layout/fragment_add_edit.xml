@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="70dp"
-            android:background="@color/colorGreen"
+            android:background="@color/colorBlackTransparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -30,7 +30,8 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/photos" />
+            app:srcCompat="@drawable/photos"
+            android:contentDescription="@string/todo" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -40,6 +41,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/photos" />
 
         <ImageView
@@ -50,6 +52,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/photos" />
 
         <ImageView
@@ -60,6 +63,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/photos" />
 
         <ImageView
@@ -70,6 +74,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/photos" />
 
         <ImageView
@@ -80,6 +85,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/photos" />
 
         <ImageView
@@ -90,6 +96,7 @@
             android:layout_marginTop="440dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/photos" />
 
         <ImageView
@@ -100,6 +107,7 @@
             android:layout_marginTop="584dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/photos" />
 
         <TextView
@@ -107,12 +115,13 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="70dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorBlackTransparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:layout_constraintVertical_bias="0.974" />
 
         <ImageView
@@ -123,6 +132,7 @@
             android:layout_marginTop="312dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/photos" />
 
         <ImageView
@@ -133,6 +143,7 @@
             android:layout_marginTop="164dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/todo"
             app:srcCompat="@drawable/photos" />
 
         <TextView
@@ -140,7 +151,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="180dp"
-            android:background="@color/colorGreen"
+            android:background="@color/colorBlackTransparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -153,7 +164,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="480dp"
-            android:background="@color/colorGreen"
+            android:background="@color/colorBlackTransparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -167,7 +178,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="70dp"
-            android:background="@color/colorGreen"
+            android:background="@color/colorBlackTransparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -181,7 +192,7 @@
             android:layout_height="740dp"
             android:layout_marginStart="204dp"
             android:layout_marginEnd="205dp"
-            android:background="@color/colorGreen"
+            android:background="@color/colorBlackTransparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

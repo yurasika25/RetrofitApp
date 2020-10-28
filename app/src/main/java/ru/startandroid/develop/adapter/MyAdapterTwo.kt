@@ -29,14 +29,12 @@ class MyAdapterTwo(private val listItems: List<NewModel>, private val mContext: 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemPadding = 8
 
-        val itemWidth = (screenWidth - itemPadding).div(1.62)
+        val itemWidth = (screenWidth - itemPadding).div(1.8)
         val layoutParams = holder.itemView.layoutParams
         layoutParams.height = layoutParams.height
         layoutParams.width = itemWidth.toInt()
         holder.itemView.layoutParams = layoutParams
         val itemList = listItems[position]
-        holder.itemView.numbersTV.text = itemList.number
-        holder.itemView.titleTV.text = itemList.title
         Glide
             .with(mContext)
             .load(itemList.image)
