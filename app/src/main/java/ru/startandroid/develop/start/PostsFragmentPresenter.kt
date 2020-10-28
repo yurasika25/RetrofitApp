@@ -9,8 +9,6 @@ import ru.startandroid.develop.retrofittest.repository.Repository
 
 class PostsFragmentPresenter : BasicPresenter<PostsFragmentView?>() {
 
-
-
     private val listItems = mutableListOf<Post>()
     lateinit var repo: Repository
 
@@ -24,12 +22,9 @@ class PostsFragmentPresenter : BasicPresenter<PostsFragmentView?>() {
     }
 
     fun onPenButtonClicked () {
-        getView()?.navigateToAddEdit()
+        getView()?.navigateToEmptyTwo()
     }
 
-    fun onDeleteButtonClicked () {
-        getView()?.navigateToEmpty()
-    }
 
     private fun fetchData() {
         repo = Repository()
@@ -40,7 +35,7 @@ class PostsFragmentPresenter : BasicPresenter<PostsFragmentView?>() {
                 result.forEach {
                     listItems.add(it)
                 }
-                listItems.add(Post("1","Gk","fdfdf","dfdfdf"))
+                listItems.add(Post("1","Ok","good","cool"))
                 listItems.forEach {
                     when(it.userId)
                     {

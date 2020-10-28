@@ -15,7 +15,7 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="todo">TODO</string>
-    <string name="posts">Posts</string>
+    <string name="Main">Main</string>
     <string name="photos">Photos</string>
     <string name="font">float</string>
     <string name="button">Create</string>
@@ -23,5 +23,8 @@
     <string name="title">title</string>
     <string name="body">body</string>
     <string name="item">Item</string>
+    <string name="One">One</string>
+    <string name="Just_animals">Just animals</string>
+    <string name="star">star</string>
 
 </resources>

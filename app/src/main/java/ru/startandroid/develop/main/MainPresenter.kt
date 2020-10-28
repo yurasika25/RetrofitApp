@@ -8,7 +8,5 @@ class MainPresenter : BasicPresenter<MainView?>() {
         super.onEnterScope()
         getView()?.onNavigateToMainFragment()
     }
-
-
 }
 

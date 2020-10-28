@@ -4,5 +4,4 @@ import ru.startandroid.develop.mvp.BasicView
 
 interface MainView : BasicView {
     fun onNavigateToMainFragment()
-
 }

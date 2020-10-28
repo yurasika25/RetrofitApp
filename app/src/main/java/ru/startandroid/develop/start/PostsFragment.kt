@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.fragment_posts.*
-import kotlinx.android.synthetic.main.fragment_posts.view.*
+import kotlinx.android.synthetic.main.fragment_main_recycler.*
+import kotlinx.android.synthetic.main.fragment_main_recycler.view.*
 import ru.startandroid.develop.R
 import ru.startandroid.develop.adapter.MyAdapter
-import ru.startandroid.develop.catandbird.screens.three.AddEditFragment
+import ru.startandroid.develop.scroll.AddEditFragment
 import ru.startandroid.develop.empty.EmptyFragment
-import ru.startandroid.develop.photos.PhotosFragment
+import ru.startandroid.develop.emptytwo.EmptyTwoFragment
 import ru.startandroid.develop.retrofittest.model.Post
 
 class PostsFragment : Fragment(), PostsFragmentView {
@@ -42,7 +42,7 @@ class PostsFragment : Fragment(), PostsFragmentView {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View = inflater.inflate(R.layout.fragment_posts, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_main_recycler, container, false)
         presenter = PostsFragmentPresenter()
         view.FAT.setOnClickListener { presenter!!.onFatButtonClicked() }
         return view
@@ -57,8 +57,8 @@ class PostsFragment : Fragment(), PostsFragmentView {
         ft.commit()
     }
 
-    override fun navigateToPhotos() {
-        val fragment : Fragment = PhotosFragment.newInstance()
+    override fun navigateToEmptyTwo() {
+        val fragment : Fragment = EmptyTwoFragment.newInstance()
         val fm = requireActivity().supportFragmentManager
         val ft = fm.beginTransaction()
         ft.replace(R.id.mainContainer,fragment)
@@ -77,7 +77,7 @@ class PostsFragment : Fragment(), PostsFragmentView {
     override fun setUpUI(data : List<Post>) {
         recyclerViewTwo.setHasFixedSize(true)
         recyclerViewTwo.layoutManager = LinearLayoutManager(context)
-        val adapter =  MyAdapter(data, {presenter?.onFatButtonClicked()}, {presenter?.onDeleteButtonClicked()}, {presenter?.onPenButtonClicked()})
+        val adapter =  MyAdapter(data, {presenter?.onFatButtonClicked()}, {presenter?.onPenButtonClicked()})
         recyclerViewTwo.adapter = adapter
     }
 }

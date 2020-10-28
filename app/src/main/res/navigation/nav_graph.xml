@@ -9,7 +9,7 @@
         android:id="@+id/PostsFragment"
         android:name="ru.startandroid.develop.start.PostsFragment"
         android:label="@string/posts_fragment"
-        tools:layout="@layout/fragment_posts">
+        tools:layout="@layout/fragment_main_recycler">
 
         <action
             android:id="@+id/action_PostsFragment_to_Photos_Fragment"
@@ -17,9 +17,9 @@
     </fragment>
     <fragment
         android:id="@+id/PhotosFragment"
-        android:name="ru.startandroid.develop.photos.PhotosFragment"
+        android:name="ru.startandroid.develop.emptytwo.EmptyTwoFragment"
         android:label="@string/photos_fragment"
-        tools:layout="@layout/fragment_photos">
+        tools:layout="@layout/fragment_empty_two">
 
         <action
             android:id="@+id/action_PhotosFragment_to_PostsFragment"

@@ -10,12 +10,6 @@ class  MainActivity : AppCompatActivity(), MainView {
 
     private var presenter: MainPresenter? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        presenter = MainPresenter()
-    }
-
     override fun onPause() {
         super.onPause()
         presenter?.exitFromView()
@@ -26,16 +20,20 @@ class  MainActivity : AppCompatActivity(), MainView {
         presenter?.enterWithView(this)
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        presenter = MainPresenter()
+    }
+
     private fun goToMainFragment() {
-        // відкриваємо Main Fragment із bottom navigation
+        // open Main Fragment with bottom navigation
         val fragment: Fragment = MainFragment.newInstance()
         val fm = supportFragmentManager
         val ft = fm.beginTransaction()
         ft.replace(R.id.mainContainer, fragment)
         ft.commit()
-
     }
-
 
     override fun onNavigateToMainFragment() {
         goToMainFragment()
