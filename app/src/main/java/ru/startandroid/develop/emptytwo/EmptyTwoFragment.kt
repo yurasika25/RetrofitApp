@@ -10,14 +10,14 @@ import ru.startandroid.develop.R
 class EmptyTwoFragment : Fragment(), EmptyTwoFragmentView {
 
     private var presenter: EmptyTwoFragmentPresenter? = null
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
 
-        val view: View = inflater.inflate(R.layout.fragment_empty_two, container, false)
-        presenter = EmptyTwoFragmentPresenter()
-        return view
+    companion object {
+        fun newInstance(): EmptyTwoFragment {
+            val args = Bundle()
+            val fragment = EmptyTwoFragment()
+            fragment.arguments = args
+            return fragment
+        }
     }
 
     override fun onPause() {
@@ -30,14 +30,14 @@ class EmptyTwoFragment : Fragment(), EmptyTwoFragmentView {
         super.onResume()
         presenter?.enterWithView(this)
     }
-    companion object {
-        fun newInstance(): EmptyTwoFragment {
-            val args = Bundle()
-            val fragment = EmptyTwoFragment()
-            fragment.arguments = args
-            return fragment
-        }
-    }
 
-    override fun navigateToPhotos() {}
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        val view: View = inflater.inflate(R.layout.fragment_empty_two, container, false)
+        presenter = EmptyTwoFragmentPresenter()
+        return view
+    }
 }

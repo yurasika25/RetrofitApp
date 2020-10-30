@@ -23,4 +23,6 @@
     <string name="Just_animals">Just animals</string>
     <string name="star">star</string>
     <string name="todo">TODO</string>
+    <string name="accept">Accept</string>
+    <string name="reset">Reset setting?</string>
 </resources>
