@@ -9,9 +9,5 @@
         android:id="@+id/navigation_photo"
         android:icon="@drawable/photo"
         android:title="@string/photos" />
-    <item
-        android:id="@+id/navigation_person"
-        android:icon="@drawable/person"
-        android:title="@string/item"/>
 
 </menu>
