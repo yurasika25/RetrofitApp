@@ -41,7 +41,7 @@ class AddPostFragment : Fragment(), AddPostFragmentView {
             requireActivity().onBackPressed()
         }
         view.create.setOnClickListener {
-
+            requireActivity().onBackPressed()
         }
         presenter = AddPostFragmentPresenter()
         return view

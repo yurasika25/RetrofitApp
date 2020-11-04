@@ -57,7 +57,7 @@ class PostsFragment : Fragment(), PostsFragmentView, PostsAdapter.PostAdapterCal
         val fragment: Fragment = AddPostFragment.newInstance()
         val fm = requireActivity().supportFragmentManager
         val ft = fm.beginTransaction()
-        ft.replace(R.id.mainContainer, fragment)
+        ft.add(R.id.mainContainer, fragment)
         ft.addToBackStack(null)
         ft.commit()
     }
