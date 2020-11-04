@@ -90,19 +90,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/three_title" />
 
-        <ImageView
-            android:id="@+id/view_star"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="348dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="410dp"
-            android:contentDescription="@string/todo"
-            app:layout_constraintEnd_toStartOf="@+id/view_delete"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/star" />
-
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/view_delete"
             android:layout_width="20dp"

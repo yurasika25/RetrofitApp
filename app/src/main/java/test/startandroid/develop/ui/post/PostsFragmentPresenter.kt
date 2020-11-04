@@ -20,9 +20,12 @@ class PostsFragmentPresenter : BasicPresenter<PostsFragmentView?>() {
     fun onFatButtonClicked() {
         getView()?.navigateToAddPost()
     }
+    fun pullToRefreshReceived(){
+        fetchData()
+    }
 
-    // TODO pull to refresh
     private fun fetchData() {
+        listItems.clear()
         repo.getPost()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())

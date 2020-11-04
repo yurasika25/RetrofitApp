@@ -11,10 +11,11 @@ import java.util.ArrayList
 
 class PostsAdapter(
     private var callBack: PostAdapterCallback,
-    private var listItems: ArrayList<Post>,
     private val listenerThree: () -> Unit
 ) :
     RecyclerView.Adapter<PostsAdapter.ViewHolder>() {
+
+    private var listItems: ArrayList<Post> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v: View =
@@ -30,6 +31,12 @@ class PostsAdapter(
         holder.itemView.two_title.text = itemList.id
         holder.itemView.three_title.text = itemList.title
         holder.itemView.four_title.text = itemList.body
+    }
+
+    fun addNewData(listItems: List<Post>) {
+        this.listItems.clear()
+        this.listItems.addAll(listItems)
+        notifyDataSetChanged()
     }
 
     fun removeItem(position: Int) {
