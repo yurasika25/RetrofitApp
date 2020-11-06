@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.activity_task.nombreUsuario
+import kotlinx.android.synthetic.main.activity_task.password
 import kotlinx.android.synthetic.main.fragment_add_post.view.*
 import test.startandroid.develop.R
 
@@ -45,21 +44,38 @@ class AddPostFragment : Fragment(), AddPostFragmentView {
         view.toolbar.setNavigationOnClickListener {
             requireActivity().onBackPressed()
         }
+
         view.create.setOnClickListener {
-            val field1 = view.one.text.toString()
-            val field2 = view.two.text.toString()
-            presenter!!.onCreateButtonClicked(field1, field2)
+            val usuario = nombreUsuario.editText!!.text.toString()
+            val passwordText = password.editText!!.text.toString()
+
+            val usuarioValidado = validarUsuario(usuario)
+            if (!usuarioValidado) {
+                nombreUsuario.error = "Поле обов'язкове для заповнення"
+            } else {
+                nombreUsuario.error = null
+            }
+
+            val passwordValida = validarPassword(passwordText)
+            if (!passwordValida) {
+                password.error = "Поле обов'язкове для заповнення"
+            } else {
+                password.error = null
+            }
+
+            if (usuarioValidado && passwordValida) {
+                requireActivity().onBackPressed()
+            }
         }
         return view
     }
 
-    override fun onCredentialsWrong() {
-        Toast.makeText(activity, "ПОМИЛКА", Toast.LENGTH_LONG).show()
 
+    private fun validarUsuario(usuario: String): Boolean {
+        return usuario >= 0.toString()
     }
 
-    override fun onBack() {
-        requireActivity().onBackPressed()
-
+    private fun validarPassword(password: String): Boolean {
+        return password >= 0.toString()
     }
 }

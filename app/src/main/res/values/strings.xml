@@ -26,4 +26,6 @@
     <string name="accept">Accept</string>
     <string name="reset">Reset setting?</string>
     <string name="Cancel">Cancel</string>
+    <string name="password">Password</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
 </resources>

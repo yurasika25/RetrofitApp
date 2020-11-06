@@ -14,4 +14,6 @@
     <color name="colorGREENR">#02685E</color>
     <color name="colorLightGreen">#D1FFC7</color>
     <color name="colorBlackTransparent">#5A5959</color>
+    <color name="colorFavorite">#080B5E56</color>
+
 </resources>
