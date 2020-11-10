@@ -14,7 +14,9 @@ import test.startandroid.develop.adapter.PostsAdapter
 import test.startandroid.develop.retrofittest.model.Post
 import test.startandroid.develop.ui.add.AddPostFragment
 
-class PostsFragment : Fragment(), PostsFragmentView, PostsAdapter.PostAdapterCallback {
+class PostsFragment : Fragment(), PostsFragmentView,
+    PostsAdapter.PostAdapterCallback,
+DeletePostsDialog.onDeletePostsListener{
 
     private var presenter: PostsFragmentPresenter? = null
 
@@ -76,6 +78,14 @@ class PostsFragment : Fragment(), PostsFragmentView, PostsAdapter.PostAdapterCal
     }
 
     override fun onDeletePost(id: Int) {
+        DeletePostsDialog.show(this, id)
+    }
+
+    override fun onDelete(id: Int) {
         presenter!!.onDeletePostClicked(id)
+    }
+
+    override fun onDeleteCanceled() {
+        TODO("Not yet implemented")
     }
 }

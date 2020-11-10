@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_task.nombreUsuario
-import kotlinx.android.synthetic.main.activity_task.password
-import kotlinx.android.synthetic.main.fragment_add_post.view.*
+import kotlinx.android.synthetic.main.fragment_add_post.*
 import test.startandroid.develop.R
 
 class AddPostFragment : Fragment(), AddPostFragmentView {
@@ -37,45 +35,41 @@ class AddPostFragment : Fragment(), AddPostFragmentView {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val view: View = inflater.inflate(R.layout.fragment_add_post, container, false)
         presenter = AddPostFragmentPresenter()
-
-        view.toolbar.setNavigationOnClickListener {
-            requireActivity().onBackPressed()
-        }
-
-        view.create.setOnClickListener {
-            val usuario = nombreUsuario.editText!!.text.toString()
-            val passwordText = password.editText!!.text.toString()
-
-            val usuarioValidado = validarUsuario(usuario)
-            if (!usuarioValidado) {
-                nombreUsuario.error = "Поле обов'язкове для заповнення"
-            } else {
-                nombreUsuario.error = null
-            }
-
-            val passwordValida = validarPassword(passwordText)
-            if (!passwordValida) {
-                password.error = "Поле обов'язкове для заповнення"
-            } else {
-                password.error = null
-            }
-
-            if (usuarioValidado && passwordValida) {
-                requireActivity().onBackPressed()
-            }
-        }
         return view
     }
 
-
-    private fun validarUsuario(usuario: String): Boolean {
-        return usuario >= 0.toString()
+    override fun setUpUI() {
+        toolbar.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
+        }
+        createB.setOnClickListener {
+            val field1 = login.editText!!.text.toString()
+            val field2 = password.editText!!.text.toString()
+            val userValid = validaLogin(field1)
+            if (!userValid) {
+                login.error = getString(R.string.empty_item)
+            } else {
+                login.error = null
+            }
+            val passwordValida = validaPassword(field2)
+            if (!passwordValida) {
+                password.error = getString(R.string.empty_item)
+            } else {
+                password.error = null
+            }
+            if (userValid && passwordValida) {
+                requireActivity().onBackPressed()
+            }
+        }
     }
 
-    private fun validarPassword(password: String): Boolean {
+    private fun validaLogin(email: String): Boolean {
+        return email >= 0.toString()
+    }
+
+    private fun validaPassword(password: String): Boolean {
         return password >= 0.toString()
     }
 }

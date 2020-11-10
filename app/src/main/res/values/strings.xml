@@ -23,9 +23,10 @@
     <string name="Just_animals">Just animals</string>
     <string name="star">star</string>
     <string name="todo">TODO</string>
-    <string name="accept">Accept</string>
-    <string name="reset">Reset setting?</string>
+    <string name="accept">Yes</string>
+    <string name="delete_post_title">Delete post?</string>
     <string name="Cancel">Cancel</string>
     <string name="password">Password</string>
+    <string name="empty_item">Поле обов\'язкове для заповнення</string>
     <string name="nombre_de_usuario">Nombre de usuario</string>
 </resources>

@@ -5,4 +5,6 @@ import test.startandroid.develop.mvp.BasicView
 
 interface AddPostFragmentView : BasicView {
 
+    fun setUpUI()
+
 }

@@ -20,11 +20,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/create"
-        android:layout_width="match_parent"
+        android:id="@+id/createB"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginEnd="140dp"
         android:layout_marginTop="130dp"
         android:background="@drawable/ic_launcher_background"
         android:text="@string/button"
@@ -39,9 +37,10 @@
         android:id="@+id/linearLayoutCompat2"
         android:layout_width="200dp"
         android:layout_height="1dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="0dp"
         android:background="@color/colorGREENR"
-        app:layout_constraintBottom_toBottomOf="@+id/nombreUsuario"
+        app:layout_constraintBottom_toBottomOf="@+id/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,27 +49,26 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="185dp"
-        android:layout_marginBottom="102dp"
-        android:layout_marginEnd="192dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/Add"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"
+       app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nombreUsuario"
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/title"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="32dp"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:background="@color/colorFavorite"
@@ -85,10 +83,10 @@
         android:layout_height="wrap_content"
         android:hint="@string/body"
         app:errorEnabled="true"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/login">
 
         <com.google.android.material.textfield.TextInputEditText
             android:background="@color/colorFavorite"

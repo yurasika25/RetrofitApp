@@ -5,4 +5,8 @@ import test.startandroid.develop.mvp.BasicPresenter
 class AddPostFragmentPresenter : BasicPresenter<AddPostFragmentView?>(){
 
 
+    override fun onEnterScope() {
+        super.onEnterScope()
+        getView()?.setUpUI()
+    }
 }
