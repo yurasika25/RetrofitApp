@@ -34,7 +34,7 @@ class AddPostFragment : Fragment(), AddPostFragmentView {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val view: View = inflater.inflate(R.layout.fragment_add_post, container, false)
         presenter = AddPostFragmentPresenter()
         return view

@@ -12,7 +12,7 @@ import test.startandroid.develop.R
 import test.startandroid.develop.retrofittest.model.Picture
 import test.startandroid.develop.ui.main.MainActivity
 
-private const val ITEM_PADDING =8
+private const val ITEM_PADDING = 8
 private const val ITEM_DIVIDER = 1.8
 
 class PhotosAdapter(private val listItems: List<Picture>, private val mContext: Context):
@@ -20,7 +20,6 @@ class PhotosAdapter(private val listItems: List<Picture>, private val mContext: 
 
     var displayMetrics = DisplayMetrics()
     private var screenWidth = 0
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v: View =
             LayoutInflater.from(parent.context).inflate(R.layout.item_photo, parent, false)

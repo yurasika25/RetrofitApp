@@ -14,8 +14,7 @@ import test.startandroid.develop.adapter.PostsAdapter
 import test.startandroid.develop.retrofittest.model.Post
 import test.startandroid.develop.ui.add.AddPostFragment
 
-class PostsFragment : Fragment(), PostsFragmentView,
-    PostsAdapter.PostAdapterCallback,
+class PostsFragment : Fragment(), PostsFragmentView, PostsAdapter.PostAdapterCallback,
 DeletePostsDialog.onDeletePostsListener{
 
     private var presenter: PostsFragmentPresenter? = null
@@ -42,13 +41,12 @@ DeletePostsDialog.onDeletePostsListener{
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val view: View = inflater.inflate(R.layout.fragment_post, container, false)
         presenter = PostsFragmentPresenter()
         view.swipe_layout.setOnRefreshListener {
             Handler().postDelayed({
-                view.swipe_layout.isRefreshing = false
-            }, 1_000)
+                view.swipe_layout.isRefreshing = false }, 1_000)
             presenter!!.pullToRefreshReceived()
         }
         view.addPostFAT.setOnClickListener { presenter!!.onFatButtonClicked() }

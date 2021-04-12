@@ -43,6 +43,7 @@ class MainFragment : Fragment(), MainFragmentView {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         navigation.setOnNavigationItemSelectedListener { item ->
             presenter!!.onNavigationClicked(item)
             true

@@ -25,7 +25,7 @@ class PostsAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemList = listItems[position]
-        holder.itemView.titleTwo.setOnClickListener { listenerThree() }
+        holder.itemView.setOnClickListener { listenerThree() }
         holder.itemView.view_delete.setOnClickListener { callBack.onDeletePost(position) }
         holder.itemView.one_title.text = itemList.userId
         holder.itemView.two_title.text = itemList.id
